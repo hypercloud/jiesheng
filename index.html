@@ -30,8 +30,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.deep_purple-pink.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/material.deep_purple-pink.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
@@ -168,6 +168,8 @@
               </p>
             </div>
           </section>
+          <section class="section--footer mdl-color--white mdl-grid">
+          </section>
         </div>
 		    <div class="mdl-layout__tab-panel" id="services">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
@@ -198,28 +200,47 @@
       				</div>
       			</div>
           </section>
+          <section class="section--footer mdl-color--white mdl-grid">
+          </section>
         </div>
         <div class="mdl-layout__tab-panel" id="contact-us">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h4>Ihre Nachricht an uns</h4>
-              Get in touch with us to get the ball rolling
-              <ul class="list-icon-items">
-                <li>
-                  <i class="material-icons md-48">email</i>hello@builtbybuffalo.com
-                </li>
-                <li>
-                  <i class="material-icons md-48">phone</i>+49(0)711 1111111
-                </li>
-                <li>
-                  <i class="material-icons md-48">favorite</i>+49(0)711 1111111
-                </li>
-                <li>
-                  <i class="material-icons md-48">phone</i>+49(0)711 1111111
-                </li>
-              </ul>
-			        <h6>Find Us</h6>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Ihre Nachricht an uns</h4>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <i class="material-icons md-48">email</i>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>E-Mail</h5>
+                  xxx@xxx.de <a href="#">proident minim</a>.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <i class="material-icons md-48">phone</i>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Telefon</h5>
+                  +49 (0)711 111111 <a href="#">proident minim</a>.
+                </div>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <i class="material-icons md-48">place</i>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Anschrift</h5>
+                  Koenigstrasse 111, 70178 Stuttgart <a href="#">proident minim</a>.
+                </div>
+              </div>
             </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn4">
+              <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn4">
+              <li class="mdl-menu__item">Lorem</li>
+              <li class="mdl-menu__item" disabled>Ipsum</li>
+              <li class="mdl-menu__item">Dolor</li>
+            </ul>
+          </section>
+          <section class="section--footer mdl-color--white mdl-grid">
           </section>
         </div>
         <footer class="mdl-mega-footer">
@@ -275,6 +296,6 @@
         </footer>
       </main>
     </div>
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="js/material.min.js"></script>
   </body>
 </html>

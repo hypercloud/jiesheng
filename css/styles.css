@@ -246,22 +246,6 @@ html, body {
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
-.mdl-demo .list-icon-items  {
-	list-style: none;
-}
-
-.mdl-demo #about-us section {
-    margin-bottom: 72px;
-}
-
-.mdl-demo #services section {
-    margin-bottom: 72px;
-}
-
-.mdl-demo #contact-us section {
-    margin-bottom: 72px;
-}
-
 .mdl-demo #about-us .mdl-card__media {
     background-color: transparent;
 }
@@ -269,9 +253,4 @@ html, body {
 .mdl-demo #services .mdl-card__media img {
     width: 100%;
     height: auto;
-}
-
-.mdl-demo .list-icon-items .material-icons {
-    margin-right: 32px;
-    vertical-align: middle;
 }
