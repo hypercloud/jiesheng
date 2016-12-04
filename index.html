@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/material.deep_purple-pink.min.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/styles.css">
 
   </head>
@@ -49,10 +50,16 @@
           <a href="#about-us" class="mdl-layout__tab">Über uns</a>
           <a href="#services" class="mdl-layout__tab">Unser Engagement</a>
           <a href="#contact-us" class="mdl-layout__tab">Kontakt</a>
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
-            <i class="material-icons" role="presentation">add</i>
-            <span class="visuallyhidden">Add</span>
-          </button>
+        </div>
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large red">
+            <i class="large material-icons">language</i>
+          </a>
+          <ul>
+            <li><a class="btn-floating red">CHN</a></li>
+            <li><a class="btn-floating yellow darken-1">DEU</a></li>
+            <li><a class="btn-floating green">ENG</a></li>
+          </ul>
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -297,5 +304,7 @@
       </main>
     </div>
     <script src="js/material.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
   </body>
 </html>
