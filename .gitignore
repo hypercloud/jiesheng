@@ -1,0 +1,10 @@
+.project
+
+# Dependency directory
+**/jspm_packages
+**/node_modules
+**/npm-debug.log
+
+# Build and tmp folders for production
+.tmp
+**/dist
