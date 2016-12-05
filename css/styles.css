@@ -246,11 +246,22 @@ html, body {
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
 
-.mdl-demo #about-us .mdl-card__media {
-    background-color: transparent;
-}
-
-.mdl-demo #services .mdl-card__media img {
+/**
+ * May not required, used temporarily
+ */
+.mdl-demo #services .responsive-img {
     width: 100%;
     height: auto;
+}
+
+.mdl-demo #services ul {
+    margin-bottom: 16px;
+    padding-left: 16px;
+}
+
+.mdl-demo #services li {
+    margin: 14px 0;
+    padding: 0;
+    list-style: initial;
+    font-size: 14px;
 }
