@@ -249,9 +249,16 @@ html, body {
 /**
  * May not required, used temporarily
  */
+.mdl-demo #about-us .responsive-img {
+    width: 80%;
+    height: auto;
+    margin-top: 50px;
+}
+
 .mdl-demo #services .responsive-img {
     width: 100%;
     height: auto;
+    margin-top: 50px;
 }
 
 .mdl-demo #services ul {
