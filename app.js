@@ -1,40 +1,42 @@
-var app = require('koa')()
-  , koa = require('koa-router')()
-  , logger = require('koa-logger')
-  , json = require('koa-json')
-  , views = require('koa-views')
-  , onerror = require('koa-onerror');
+const koa = require('koa');
+const router = require('koa-router')();
+const serve = require('koa-static');
+const cors = require('kcors');
+const parse = require('co-body');
+const nodemailer = require('nodemailer');
+const mailgun = require('nodemailer-mailgun-transport');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+const app = koa();
 
-// global middlewares
-app.use(views('views', {
-  root: __dirname + '/views',
-  default: 'jade'
-}));
-app.use(require('koa-bodyparser')());
-app.use(json());
-app.use(logger());
+const auth = {
+  auth: {
+    api_key: 'key-79080355940d6338a6d937945598c2b0',
+    domain: 'sandbox7ac29bca8bf34d23937ff863fdf1844f.mailgun.org'
+  }
+}
+const transporter = nodemailer.createTransport(mailgun(auth));
 
-app.use(function *(next){
-  var start = new Date;
+router.post('/emails', function *(next) {
+  const body = yield parse.json(this);
+  const send = transporter.templateSender({
+    subject: '联系我们： {{subject}}!',
+    html: '<b>联系人：<strong>{{name}}</strong></b><br/><b>邮件：{{email}}</b><br/><b>电话：{{telephone}}</b><br/><b>消息：</b><p>{{message}}</p>'
+  }, {
+    to: 'jiesheng.zhu@hotmail.com'
+  });
+  yield send({
+    from: `"${body.name}" <${body.email}>`
+  }, body);
+  this.body = {
+    created: body
+  };
+  this.status = 201;
   yield next;
-  var ms = new Date - start;
-  console.log('%s %s - %s', this.method, this.url, ms);
 });
 
-app.use(require('koa-static')(__dirname + '/public'));
-
-// routes definition
-koa.use('/', index.routes(), index.allowedMethods());
-koa.use('/users', users.routes(), users.allowedMethods());
-
-// mount root routes  
-app.use(koa.routes());
-
-app.on('error', function(err, ctx){
-  logger.error('server error', err, ctx);
-});
-
-module.exports = app;
+app
+  .use(cors())
+  .use(router.routes())
+  .use(router.allowedMethods())
+  .use(serve('public'))
+  .listen(8080, '0.0.0.0');
