@@ -10,8 +10,12 @@ const app = koa();
 
 const auth = {
   auth: {
+    // DEV
+    // api_key: 'key-79080355940d6338a6d937945598c2b0',
+    // domain: 'sandbox7ac29bca8bf34d23937ff863fdf1844f.mailgun.org'
+    // PROD
     api_key: 'key-79080355940d6338a6d937945598c2b0',
-    domain: 'sandbox7ac29bca8bf34d23937ff863fdf1844f.mailgun.org'
+    domain: 'mailgun.nodeunify.com'
   }
 }
 const transporter = nodemailer.createTransport(mailgun(auth));
